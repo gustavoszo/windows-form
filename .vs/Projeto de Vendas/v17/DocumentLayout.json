@@ -1,0 +1,174 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\gustavo.oliveira\\source\\repos\\projeto de vendas\\br.com.projeto.dao\\employeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.dao\\employeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.dao\\clientdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.dao\\clientdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\clientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.views\\clientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\employeeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.views\\employeeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\employeeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.views\\employeeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\clientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.views\\clientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 277,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientForm.cs",
+              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\ClientForm.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.views\\ClientForm.cs",
+              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\ClientForm.cs",
+              "RelativeToolTip": "br.com.projeto.views\\ClientForm.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAtwJ8AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-11-13T18:02:20.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmployeeForm.cs",
+              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\EmployeeForm.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.views\\EmployeeForm.cs",
+              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\EmployeeForm.cs",
+              "RelativeToolTip": "br.com.projeto.views\\EmployeeForm.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAAAHgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-11-13T17:38:44.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeDao.cs",
+              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.dao\\EmployeeDao.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.dao\\EmployeeDao.cs",
+              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.dao\\EmployeeDao.cs",
+              "RelativeToolTip": "br.com.projeto.dao\\EmployeeDao.cs",
+              "ViewState": "AQIAAKQAAAAAAAAAAAAAAK0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T17:13:50.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\Employee.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.models\\Employee.cs",
+              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\Employee.cs",
+              "RelativeToolTip": "br.com.projeto.models\\Employee.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T16:55:06.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClientDao.cs",
+              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.dao\\ClientDao.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.dao\\ClientDao.cs",
+              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.dao\\ClientDao.cs",
+              "RelativeToolTip": "br.com.projeto.dao\\ClientDao.cs",
+              "ViewState": "AQIAAMIAAAAAAAAAAAAAAM8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T17:50:46.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\Client.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.models\\Client.cs",
+              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\Client.cs",
+              "RelativeToolTip": "br.com.projeto.models\\Client.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAAgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T18:17:33.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmployeeForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\EmployeeForm.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.views\\EmployeeForm.cs",
+              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\EmployeeForm.cs [Design]",
+              "RelativeToolTip": "br.com.projeto.views\\EmployeeForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-11-13T18:54:24.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClientForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\ClientForm.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.views\\ClientForm.cs",
+              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\ClientForm.cs [Design]",
+              "RelativeToolTip": "br.com.projeto.views\\ClientForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-11-13T18:04:51.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\Person.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.models\\Person.cs",
+              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\Person.cs",
+              "RelativeToolTip": "br.com.projeto.models\\Person.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAowAgAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T16:53:50.825Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 123,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

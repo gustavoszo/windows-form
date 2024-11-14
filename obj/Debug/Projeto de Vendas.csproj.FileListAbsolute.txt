@@ -1,0 +1,47 @@
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\Projeto de Vendas.exe.config
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\Projeto de Vendas.exe
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\Projeto de Vendas.pdb
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\Google.Protobuf.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\MySql.Data.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Buffers.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.IO.Pipelines.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Memory.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\ZstdSharp.dll
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\Google.Protobuf.pdb
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\Google.Protobuf.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\MySql.Data.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Buffers.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.IO.Pipelines.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Memory.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto de Vendas.csproj.AssemblyReference.cache
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto de Vendas.csproj.SuggestedBindingRedirects.cache
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto de Vendas.exe.config
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto_de_Vendas.br.com.projeto.views.ClientForm.resources
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto_de_Vendas.br.com.projeto.views.EmployeeForm.resources
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto_de_Vendas.Form1.resources
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto_de_Vendas.Properties.Resources.resources
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto de Vendas.csproj.GenerateResource.cache
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto de Vendas.csproj.CoreCompileInputs.cache
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto .D9AEBBBD.Up2Date
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto de Vendas.exe
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto de Vendas.pdb
