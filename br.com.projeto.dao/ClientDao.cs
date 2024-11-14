@@ -256,7 +256,6 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
             }
         }
 
-<<<<<<< HEAD
         public Client FindByEmail(string email)
         {
             Client client = null;
@@ -277,26 +276,6 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
                     if (reader.Read())
                     {
                         client = new Client
-=======
-        public List<Client> FindByName(string name)
-        {
-            _connection.Open();
-            try
-            {
-                List<Client> clients = new List<Client>();
-
-                string query = @"SELECT * FROM clientes C, enderecos E 
-                                 WHERE C.id_endereco = E.id_endereco AND C.nome LIKE %@nome%";
-
-                MySqlCommand command = new MySqlCommand(query, _connection);
-                command.Parameters.AddWithValue("@nome", name);
-
-                using (MySqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Client client = new Client
->>>>>>> 6ec8b053dc2ebae362c3fb3a0dd7b5295c3fd197
                         {
                             Name = reader.GetString("nome"),
                             Cpf = reader.GetString("cpf"),
@@ -311,11 +290,57 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
                                 State = reader.GetString("estado")
                             }
                         };
-<<<<<<< HEAD
+                    }
+                }
+                return client;
+            }
+
+            catch (Exception e)
+            {
+                throw new ExceptionDb("Ocorreu um erro ao tentar buscar o cliente por email: " + e.Message);
+            }
+            finally
+            {
+                _connection.Close();
+            }
+        }
+        public List<Client> FindByName(string name)
+        {
+            _connection.Open();
+            try
+            {
+                List<Client> clients = new List<Client>();
+
+                string query = @"SELECT * FROM clientes C, enderecos E 
+                               WHERE C.id_endereco = E.id_endereco AND C.nome LIKE %@nome%";
+
+                MySqlCommand command = new MySqlCommand(query, _connection);
+                command.Parameters.AddWithValue("@nome", name);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        clients.Add(new Client
+                        {
+                            Name = reader.GetString("nome"),
+                            Cpf = reader.GetString("cpf"),
+                            Email = reader.GetString("email"),
+                            Phone = reader.GetString("celular"),
+                            Address = new Address
+                            {
+                                IdAddress = reader.GetInt32("id_endereco"),
+                                Place = reader.GetString("logradouro"),
+                                Number = reader.GetInt32("numero"),
+                                City = reader.GetString("cidade"),
+                                State = reader.GetString("estado")
+                            }
+                        });
+                      
                     }
                 }
 
-                return client;
+                return clients;
             }
             catch (Exception e)
             {
@@ -361,20 +386,13 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
                             }
                         };
 
-=======
->>>>>>> 6ec8b053dc2ebae362c3fb3a0dd7b5295c3fd197
                         clients.Add(client);
                     }
                 }
                 return clients;
-<<<<<<< HEAD
-            }
-            catch (Exception e)
-=======
 
             }
             catch(Exception e)
->>>>>>> 6ec8b053dc2ebae362c3fb3a0dd7b5295c3fd197
             {
                 throw new ExceptionDb("Ocorreu um erro ao buscar os clientes por nome: " + e.Message);
             }
@@ -383,12 +401,6 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
                 _connection.Close();
             }
         }
-<<<<<<< HEAD
-
-=======
->>>>>>> 6ec8b053dc2ebae362c3fb3a0dd7b5295c3fd197
-
     }
-
 
 }

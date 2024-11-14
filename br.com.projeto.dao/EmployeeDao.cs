@@ -56,7 +56,7 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
 
                 command = new MySqlCommand(employeeQuery, _connection, transaction);
                 command.Parameters.AddWithValue("@nome", obj.Name);
-                command.Parameters.AddWithValue("@cpf", obj.Cpf); 
+                command.Parameters.AddWithValue("@cpf", obj.Cpf);
                 command.Parameters.AddWithValue("@email", obj.Email);
                 command.Parameters.AddWithValue("@senha", obj.Password);
                 command.Parameters.AddWithValue("@cargo", obj.Position);
@@ -68,7 +68,7 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
                 transaction.Commit();
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 transaction.Rollback();
                 throw new ExceptionDb("Ocorreu um erro ao tental salvar o Funcionario: " + e.Message);
@@ -81,7 +81,7 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
         }
 
         public List<Employee> FindAll()
-        {   
+        {
             List<Employee> list = new List<Employee>();
             _connection.Open();
 
@@ -92,7 +92,7 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
 
                 MySqlCommand command = new MySqlCommand(query, _connection);
 
-                using(MySqlDataReader reader = command.ExecuteReader())
+                using (MySqlDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
@@ -105,14 +105,14 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
                             AccessLevel = (AccessLevel)Enum.Parse(typeof(AccessLevel), reader.GetString("nivel_acesso")),
                             Position = reader.GetString("cargo"),
 
-                          Address = new Address
-                          {
-                              IdAddress = reader.GetInt32("id_endereco"),
-                              Place = reader.GetString("logradouro"),
-                              Number = reader.GetInt32("numero"),
-                              City = reader.GetString("cidade"),
-                              State = reader.GetString("estado")
-                          }
+                            Address = new Address
+                            {
+                                IdAddress = reader.GetInt32("id_endereco"),
+                                Place = reader.GetString("logradouro"),
+                                Number = reader.GetInt32("numero"),
+                                City = reader.GetString("cidade"),
+                                State = reader.GetString("estado")
+                            }
                         }
                         );
                     }
@@ -122,7 +122,7 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
             catch (Exception e)
             {
                 throw new ExceptionDb("Ocorreu um erro ao buscar os funcionários: " + e.Message);
-            } 
+            }
             finally
             {
                 _connection.Close();
@@ -176,7 +176,7 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
             }
         }
 
-        public void Delete(Client obj)
+        public void Delete(Employee obj)
         {
             _connection.Open();
             MySqlTransaction transaction = null;
@@ -185,9 +185,9 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
             {
                 transaction = _connection.BeginTransaction();
 
-                string deleteClientQuery = @"DELETE FROM clientes WHERE cpf = @cpf";
+                string deleteEmployeeQuery = @"DELETE FROM funcionarios WHERE cpf = @cpf";
 
-                MySqlCommand command = new MySqlCommand(deleteClientQuery, _connection, transaction);
+                MySqlCommand command = new MySqlCommand(deleteEmployeeQuery, _connection, transaction);
                 command.Parameters.AddWithValue("@cpf", obj.Cpf);
                 command.ExecuteNonQuery();
 
@@ -201,7 +201,212 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
             catch (Exception e)
             {
                 transaction.Rollback();
-                throw new ExceptionDb("Ocorreu um errro ao tentar deletar o Cliente " + e.Message);
+                throw new ExceptionDb("Ocorreu um errro ao tentar deletar o Funcionário: " + e.Message);
+            }
+            finally
+            {
+                _connection.Close();
+            }
+        }
+
+        public Employee FindByCpf(string cpf)
+        {
+            Employee employee = null;
+
+            _connection.Open();
+            try
+            {
+
+                string query = "SELECT * FROM funcionarios F, enderecos E " +
+                               "WHERE F.id_endereco = E.id_endereco AND " +
+                               "F.cpf = @cpf";
+
+                MySqlCommand command = new MySqlCommand(query, _connection);
+                command.Parameters.AddWithValue("@cpf", cpf);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        employee = new Employee
+                        {
+                            Name = reader.GetString("nome"),
+                            Cpf = reader.GetString("cpf"),
+                            Email = reader.GetString("email"),
+                            Phone = reader.GetString("celular"),
+                            Password = reader.GetString("senha"),
+                            Position = reader.GetString("cargo"),
+                            AccessLevel = (AccessLevel)Enum.Parse(typeof(AccessLevel), reader.GetString("nivel_acesso")),
+                            Address = new Address
+                            {
+                                IdAddress = reader.GetInt32("id_endereco"),
+                                Place = reader.GetString("logradouro"),
+                                Number = reader.GetInt32("numero"),
+                                City = reader.GetString("cidade"),
+                                State = reader.GetString("estado")
+                            }
+                        };
+                    }
+                }
+
+                return employee;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionDb("Ocorreu um erro ao buscar o funcionário pelo CPF: " + e.Message);
+            }
+            finally
+            {
+                _connection.Close();
+            }
+        }
+
+        public Employee FindByEmail(string email)
+        {
+            Employee employee = null;
+
+            _connection.Open();
+            try
+            {
+                string query = "SELECT * FROM funcionarios F, enderecos E " +
+                               "WHERE F.id_endereco = E.id_endereco AND " +
+                               "F.email = @email";
+
+                MySqlCommand command = new MySqlCommand(query, _connection);
+                command.Parameters.AddWithValue("@email", email);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        employee = new Employee
+                        {
+                            Name = reader.GetString("nome"),
+                            Cpf = reader.GetString("cpf"),
+                            Email = reader.GetString("email"),
+                            Phone = reader.GetString("celular"),
+                            Password = reader.GetString("senha"),
+                            Position = reader.GetString("cargo"),
+                            AccessLevel = (AccessLevel)Enum.Parse(typeof(AccessLevel), reader.GetString("nivel_acesso")),
+                            Address = new Address
+                            {
+                                Place = reader.GetString("logradouro"),
+                                Number = reader.GetInt32("numero"),
+                                City = reader.GetString("cidade"),
+                                State = reader.GetString("estado")
+                            }
+                        };
+
+                    }
+                }
+                return employee;
+            }
+            catch(Exception e)
+            {
+                throw new ExceptionDb("Ocorreu um erro ao buscar o funcionário por email: " + e.Message);
+            }
+            finally
+            {
+                _connection.Close();
+            }
+            
+        }
+
+        public List<Employee> FindByName(string name)
+        {
+            _connection.Open();
+            try
+            {
+                List<Employee> employees = new List<Employee>();
+
+                string query = @"SELECT * FROM funcionarios F, enderecos E 
+                                 WHERE F.id_endereco = E.id_endereco AND F.nome LIKE %@nome%";
+
+                MySqlCommand command = new MySqlCommand(query, _connection);
+                command.Parameters.AddWithValue("@nome", name);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        employees.Add(new Employee 
+                        {
+                            Name = reader.GetString("nome"),
+                            Cpf = reader.GetString("cpf"),
+                            Email = reader.GetString("email"),
+                            Phone = reader.GetString("celular"),
+                            Password = reader.GetString("senha"),
+                            Position = reader.GetString("cargo"),
+                            AccessLevel = (AccessLevel)Enum.Parse(typeof(AccessLevel), reader.GetString("nivel_acesso")),
+                            Address = new Address
+                            {
+                                IdAddress = reader.GetInt32("id_endereco"),
+                                Place = reader.GetString("logradouro"),
+                                Number = reader.GetInt32("numero"),
+                                City = reader.GetString("cidade"),
+                                State = reader.GetString("estado")
+                            }
+                        });
+
+                    }
+                }
+
+                return employees;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionDb("Ocorreu um erro ao buscar os funcionários pelo nome: " + e.Message);
+            }
+            finally
+            {
+                _connection.Close();
+            }
+        }
+
+        public List<Employee> FindAllByName(string name)
+        {
+            List<Employee> list = new List<Employee>();
+            _connection.Open();
+
+            try
+            {
+                string query = @"SELECT * FROM funcionarios F, enderecos E
+                                WHERE F.id_endereco = E.id_endereco AND F.nome LIKE @nome";
+
+                MySqlCommand command = new MySqlCommand(query, _connection);
+                command.Parameters.AddWithValue("@nome", "%" + name + "%");
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        list.Add(new Employee()
+                        {
+                            Name = reader.GetString("nome"),
+                            Cpf = reader.GetString("cpf"),
+                            Email = reader.GetString("email"),
+                            Password = reader.GetString("senha"),
+                            Phone = reader.GetString("celular"),
+                            AccessLevel = (AccessLevel)Enum.Parse(typeof(AccessLevel), reader.GetString("nivel_acesso")),
+                            Position = reader.GetString("cargo"),
+
+                            Address = new Address
+                            {
+                                IdAddress = reader.GetInt32("id_endereco"),
+                                Place = reader.GetString("logradouro"),
+                                Number = reader.GetInt32("numero"),
+                                City = reader.GetString("cidade"),
+                                State = reader.GetString("estado")
+                            }
+                        }
+                        );
+                    }
+                }
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionDb("Ocorreu um erro ao buscar os funcionários: " + e.Message);
             }
             finally
             {

@@ -98,9 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="br.com.curso.utils\PasswordHashUtil.cs" />
     <Compile Include="br.com.projeto.dao\ClientDao.cs" />
     <Compile Include="br.com.projeto.dao\EmployeeDao.cs" />
+    <Compile Include="br.com.projeto.dao\ProviderDao.cs" />
     <Compile Include="br.com.projeto.db\ConnectionDb.cs" />
+    <Compile Include="br.com.projeto.exceptions\CnpjUniqueValidationException.cs" />
     <Compile Include="br.com.projeto.exceptions\CpfUniqueValidationException.cs" />
     <Compile Include="br.com.projeto.exceptions\EmailUniqueValidationException.cs" />
     <Compile Include="br.com.projeto.exceptions\ExceptionDb.cs" />
@@ -109,6 +112,7 @@
     <Compile Include="br.com.projeto.models\Employee.cs" />
     <Compile Include="br.com.projeto.models\enum\AccessLevel.cs" />
     <Compile Include="br.com.projeto.models\Person.cs" />
+    <Compile Include="br.com.projeto.models\Provider.cs" />
     <Compile Include="br.com.projeto.views\ClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +124,12 @@
     </Compile>
     <Compile Include="br.com.projeto.views\EmployeeForm.Designer.cs">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.projeto.views\ProviderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.views\ProviderForm.Designer.cs">
+      <DependentUpon>ProviderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -134,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.views\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.views\ProviderForm.resx">
+      <DependentUpon>ProviderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

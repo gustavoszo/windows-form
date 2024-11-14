@@ -1,9 +1,6 @@
-﻿using Projeto_de_Vendas.br.com.projeto.models;
-using System.Windows.Forms;
-
-namespace Projeto_de_Vendas.br.com.projeto.views
+﻿namespace Projeto_de_Vendas.br.com.projeto.views
 {
-    partial class ClientForm
+    partial class ProviderForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,8 +29,10 @@ namespace Projeto_de_Vendas.br.com.projeto.views
         private void InitializeComponent()
         {
             System.Windows.Forms.TabControl tabControlClient;
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.clientTabPage = new System.Windows.Forms.TabPage();
-            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
             this.comboBoxState = new System.Windows.Forms.ComboBox();
             this.stateLabel = new System.Windows.Forms.Label();
             this.txtCity = new System.Windows.Forms.TextBox();
@@ -44,7 +43,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.addressLabel = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.phoneLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelCnpj = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.emailLabel = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -53,19 +52,40 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.table = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.titleLabel = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnClean = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnClean = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             tabControlClient = new System.Windows.Forms.TabControl();
+            this.panel1.SuspendLayout();
             tabControlClient.SuspendLayout();
             this.clientTabPage.SuspendLayout();
             this.listLabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Controls.Add(this.titleLabel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 100);
+            this.panel1.TabIndex = 1;
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.ForeColor = System.Drawing.SystemColors.Window;
+            this.titleLabel.Location = new System.Drawing.Point(39, 41);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(245, 25);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = "Cadastro de Fornecedor";
+            this.titleLabel.Click += new System.EventHandler(this.titleLabel_Click);
             // 
             // tabControlClient
             // 
@@ -73,15 +93,15 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             tabControlClient.Controls.Add(this.listLabel);
             tabControlClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabControlClient.ItemSize = new System.Drawing.Size(127, 25);
-            tabControlClient.Location = new System.Drawing.Point(12, 123);
+            tabControlClient.Location = new System.Drawing.Point(12, 116);
             tabControlClient.Name = "tabControlClient";
             tabControlClient.SelectedIndex = 0;
             tabControlClient.Size = new System.Drawing.Size(776, 276);
-            tabControlClient.TabIndex = 1;
+            tabControlClient.TabIndex = 2;
             // 
             // clientTabPage
             // 
-            this.clientTabPage.Controls.Add(this.txtCpf);
+            this.clientTabPage.Controls.Add(this.txtCnpj);
             this.clientTabPage.Controls.Add(this.comboBoxState);
             this.clientTabPage.Controls.Add(this.stateLabel);
             this.clientTabPage.Controls.Add(this.txtCity);
@@ -92,7 +112,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.clientTabPage.Controls.Add(this.addressLabel);
             this.clientTabPage.Controls.Add(this.txtPhone);
             this.clientTabPage.Controls.Add(this.phoneLabel);
-            this.clientTabPage.Controls.Add(this.label2);
+            this.clientTabPage.Controls.Add(this.labelCnpj);
             this.clientTabPage.Controls.Add(this.txtEmail);
             this.clientTabPage.Controls.Add(this.emailLabel);
             this.clientTabPage.Controls.Add(this.txtName);
@@ -102,19 +122,17 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.clientTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.clientTabPage.Size = new System.Drawing.Size(768, 243);
             this.clientTabPage.TabIndex = 0;
-            this.clientTabPage.Text = "Dados Pessoais";
+            this.clientTabPage.Text = "Dados do Fornecedor";
             this.clientTabPage.UseVisualStyleBackColor = true;
-            this.clientTabPage.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // txtCpf
+            // txtCnpj
             // 
-            this.txtCpf.Location = new System.Drawing.Point(467, 22);
-            this.txtCpf.Mask = "###,###,###-##";
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(151, 26);
-            this.txtCpf.TabIndex = 16;
-            this.txtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
-            this.txtCpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.cpfMaskedTextBox_MaskInputRejected);
+            this.txtCnpj.Location = new System.Drawing.Point(467, 22);
+            this.txtCnpj.Mask = "##,###,###/####-##";
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(151, 26);
+            this.txtCnpj.TabIndex = 16;
+            this.txtCnpj.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // comboBoxState
             // 
@@ -135,7 +153,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.comboBoxState.Name = "comboBoxState";
             this.comboBoxState.Size = new System.Drawing.Size(85, 28);
             this.comboBoxState.TabIndex = 15;
-            this.comboBoxState.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // stateLabel
             // 
@@ -170,9 +187,8 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.txtAddressNumber.Name = "txtAddressNumber";
             this.txtAddressNumber.Size = new System.Drawing.Size(73, 26);
             this.txtAddressNumber.TabIndex = 11;
-            this.txtAddressNumber.UseWaitCursor = true;
             this.txtAddressNumber.TextChanged += new System.EventHandler(this.txtAddressNumber_TextChanged);
-            this.txtAddressNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxTAddressNumberKeyPress);
+            this.txtAddressNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddressNumber_KeyPress);
             // 
             // numberLabel
             // 
@@ -183,7 +199,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.numberLabel.Size = new System.Drawing.Size(69, 20);
             this.numberLabel.TabIndex = 10;
             this.numberLabel.Text = "Número:";
-            this.numberLabel.Click += new System.EventHandler(this.numberLabel_Click);
             // 
             // txtAddress
             // 
@@ -201,7 +216,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.addressLabel.Size = new System.Drawing.Size(82, 20);
             this.addressLabel.TabIndex = 8;
             this.addressLabel.Text = "Endereço:";
-            this.addressLabel.Click += new System.EventHandler(this.addressLabel_Click);
             // 
             // txtPhone
             // 
@@ -221,18 +235,16 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.phoneLabel.Size = new System.Drawing.Size(62, 20);
             this.phoneLabel.TabIndex = 6;
             this.phoneLabel.Text = "Celular:";
-            this.phoneLabel.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label2
+            // labelCnpj
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(417, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "CPF:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.labelCnpj.AutoSize = true;
+            this.labelCnpj.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelCnpj.Location = new System.Drawing.Point(417, 25);
+            this.labelCnpj.Name = "labelCnpj";
+            this.labelCnpj.Size = new System.Drawing.Size(53, 20);
+            this.labelCnpj.TabIndex = 4;
+            this.labelCnpj.Text = "CNPJ:";
             // 
             // txtEmail
             // 
@@ -257,7 +269,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(279, 26);
             this.txtName.TabIndex = 1;
-            this.txtName.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
             // 
             // nameLabel
             // 
@@ -268,7 +279,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.nameLabel.Size = new System.Drawing.Size(55, 20);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "Nome:";
-            this.nameLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // listLabel
             // 
@@ -289,7 +299,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table.Location = new System.Drawing.Point(19, 75);
             this.table.Name = "table";
-            this.table.Size = new System.Drawing.Size(732, 150);
+            this.table.Size = new System.Drawing.Size(731, 150);
             this.table.TabIndex = 4;
             this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             this.table.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellDoubleClick);
@@ -300,7 +310,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(279, 26);
             this.txtSearch.TabIndex = 2;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // labelSearch
             // 
@@ -312,81 +321,56 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.labelSearch.TabIndex = 1;
             this.labelSearch.Text = "Nome:";
             // 
-            // panel1
+            // btnCancel
             // 
-            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel1.Controls.Add(this.titleLabel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 100);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // titleLabel
-            // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.BackColor = System.Drawing.Color.Transparent;
-            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.ForeColor = System.Drawing.SystemColors.Window;
-            this.titleLabel.Location = new System.Drawing.Point(39, 41);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(202, 25);
-            this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "Cadastro de Cliente";
-            this.titleLabel.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnSave.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSave.Location = new System.Drawing.Point(150, 414);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(104, 33);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Salvar";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnClean
-            // 
-            this.btnClean.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnClean.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnClean.Location = new System.Drawing.Point(286, 414);
-            this.btnClean.Name = "btnClean";
-            this.btnClean.Size = new System.Drawing.Size(104, 33);
-            this.btnClean.TabIndex = 3;
-            this.btnClean.Text = "Limpar";
-            this.btnClean.UseVisualStyleBackColor = false;
-            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnCancel.Location = new System.Drawing.Point(546, 405);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(104, 33);
+            this.btnCancel.TabIndex = 11;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnDelete.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnDelete.Location = new System.Drawing.Point(415, 414);
+            this.btnDelete.Location = new System.Drawing.Point(415, 405);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(104, 33);
-            this.btnDelete.TabIndex = 6;
+            this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Deletar";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Visible = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnCancel
+            // btnClean
             // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnCancel.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnCancel.Location = new System.Drawing.Point(544, 414);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(104, 33);
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Visible = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnClean.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnClean.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnClean.Location = new System.Drawing.Point(285, 405);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(104, 33);
+            this.btnClean.TabIndex = 9;
+            this.btnClean.Text = "Limpar";
+            this.btnClean.UseVisualStyleBackColor = false;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
-            // ClientForm
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnSave.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnSave.Location = new System.Drawing.Point(152, 405);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(104, 33);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "Salvar";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // ProviderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -397,19 +381,17 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.Controls.Add(this.btnSave);
             this.Controls.Add(tabControlClient);
             this.Controls.Add(this.panel1);
-            this.HelpButton = true;
-            this.Name = "ClientForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gerenciamento de Clientes";
-            this.Load += new System.EventHandler(this.ClientForm_Load);
+            this.Name = "ProviderForm";
+            this.Text = "Gerenciamento de fornecedores";
+            this.Load += new System.EventHandler(this.ProviderForm_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             tabControlClient.ResumeLayout(false);
             this.clientTabPage.ResumeLayout(false);
             this.clientTabPage.PerformLayout();
             this.listLabel.ResumeLayout(false);
             this.listLabel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -419,29 +401,29 @@ namespace Projeto_de_Vendas.br.com.projeto.views
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.TabPage clientTabPage;
-        private System.Windows.Forms.TabPage listLabel;
-        private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label phoneLabel;
-        private System.Windows.Forms.MaskedTextBox txtPhone;
+        private System.Windows.Forms.MaskedTextBox txtCnpj;
+        private System.Windows.Forms.ComboBox comboBoxState;
+        private System.Windows.Forms.Label stateLabel;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.Label cityLabel;
         private System.Windows.Forms.TextBox txtAddressNumber;
         private System.Windows.Forms.Label numberLabel;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label addressLabel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label stateLabel;
-        private System.Windows.Forms.TextBox txtCity;
-        private System.Windows.Forms.Label cityLabel;
-        private System.Windows.Forms.ComboBox comboBoxState;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnClean;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.MaskedTextBox txtCpf;
-        private System.Windows.Forms.Label labelSearch;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.MaskedTextBox txtPhone;
+        private System.Windows.Forms.Label phoneLabel;
+        private System.Windows.Forms.Label labelCnpj;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TabPage listLabel;
         private System.Windows.Forms.DataGridView table;
-        private Button btnCancel;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label labelSearch;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnClean;
+        private System.Windows.Forms.Button btnSave;
     }
 }

@@ -17,7 +17,7 @@ namespace Projeto_de_Vendas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EmployeeForm());
+            Application.Run(new ProviderForm());
         }
     }
 }

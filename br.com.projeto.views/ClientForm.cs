@@ -130,14 +130,14 @@ namespace Projeto_de_Vendas.br.com.projeto.views
                     if (_clientDao.FindByCpf(txtCpf.Text) != null) throw new CpfUniqueValidationException("CPF já cadastrado!");
                     if (_clientDao.FindByEmail(_client.Email) != null) throw new EmailUniqueValidationException("E-mail já cadastrado!");
                     _clientDao.Create(_client);
-                    MessageBox.Show("Cliente cadastrado com sucesso!");
+                    MessageBox.Show("Cliente cadastrado com sucesso!", "Cadastro de Cliente");
                 } 
                 else
                 {
                     Client client = _clientDao.FindByEmail(_client.Email);
                     if (client != null && client.Cpf != id) throw new EmailUniqueValidationException("E-mail já cadastrado");
                     _clientDao.Update(_client);
-                    MessageBox.Show("Cliente atualizado com sucesso!");
+                    MessageBox.Show("Cliente atualizado com sucesso!", "Atualização de Cliente");
                 }
 
                 btnClean_Click(sender, e);
@@ -168,10 +168,21 @@ namespace Projeto_de_Vendas.br.com.projeto.views
         {
             try
             {
-                _clientDao.Delete(_client);
-                MessageBox.Show("Cliente deletado com sucesso!");
-                btnClean_Click(sender, e);
-                unloadClient();
+
+                DialogResult result = MessageBox.Show(
+                    "Deseja realmente apagar o Cliente?",
+                    "Confirmar remoção",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    _clientDao.Delete(_client);
+                    MessageBox.Show("Cliente deletado com sucesso!", "Exclusão de Cliente");
+                    btnClean_Click(sender, e);
+                    unloadClient();
+                }
 
                 table.DataSource = _clientDao.FindAll();
             }
@@ -213,25 +224,24 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             }
         }
 
-        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void loadClient(string cpf)
         {
+            _client = _clientDao.FindByCpf(cpf);
 
-        }
-
-        private void loadClient(Client client)
-        {
             btnSave.Text = "Atualizar";
             btnDelete.Visible = true;
+            btnCancel.Visible = true;
+
             txtCpf.Enabled = false;
 
-            txtName.Text = client.Name;
-            txtCpf.Text = client.Cpf;
-            txtEmail.Text = client.Email;
-            txtPhone.Text = client.Phone;
-            txtAddress.Text = client.Address.Place;
-            txtAddressNumber.Text = client.Address.Number.ToString();
-            txtCity.Text = client.Address.City;
-            comboBoxState.SelectedItem = client.Address.State;
+            txtName.Text = _client.Name;
+            txtCpf.Text = _client.Cpf;
+            txtEmail.Text = _client.Email;
+            txtPhone.Text = _client.Phone;
+            txtAddress.Text = _client.Address.Place;
+            txtAddressNumber.Text = _client.Address.Number.ToString();
+            txtCity.Text = _client.Address.City;
+            comboBoxState.SelectedItem = _client.Address.State;
         }
 
 
@@ -239,6 +249,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
         {
             btnSave.Text = "Salvar";
             btnDelete.Visible = false;
+            btnCancel.Visible= false;
             txtCpf.Enabled = true;
             _client = new Client();
             _address = new Address();
@@ -248,17 +259,14 @@ namespace Projeto_de_Vendas.br.com.projeto.views
         private void table_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             string cpf = table.CurrentRow.Cells[1].Value.ToString();
-            _client = _clientDao.FindByCpf(cpf);
 
-            tabControlClient.SelectedTab = clientTabPage;
-
-            loadClient(_client);
+            loadClient(cpf);
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
+            if (txtSearch.Text.Trim() == "") return;
             List<Client> clients = _clientDao.FindAllByName(txtSearch.Text);
-            Console.WriteLine(clients);
 
             if (clients.Count == 0)
             {
@@ -269,10 +277,15 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             table.DataSource = clients;
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            List<Client> clients = _clientDao.FindByName(txtSearch.Text);
-            table.DataSource = clients;
+            btnClean_Click(sender, e);
+            unloadClient();
+        }
+
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

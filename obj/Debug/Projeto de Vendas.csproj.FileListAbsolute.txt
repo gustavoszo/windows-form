@@ -45,3 +45,4 @@ C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto de Ve
 C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto .D9AEBBBD.Up2Date
 C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto de Vendas.exe
 C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto de Vendas.pdb
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto_de_Vendas.br.com.projeto.views.ProviderForm.resources
