@@ -220,11 +220,11 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
                                "C.cpf = @cpf";
 
                 MySqlCommand command = new MySqlCommand(query, _connection);
-                command.Parameters.AddWithValue("@cpf", cpf);  
+                command.Parameters.AddWithValue("@cpf", cpf);
                 
                 using (MySqlDataReader reader = command.ExecuteReader())
                 {
-                    if (reader.Read()) 
+                    if (reader.Read())
                     {
                         client = new Client
                         {

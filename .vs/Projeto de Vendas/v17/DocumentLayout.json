@@ -1,46 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\",
+  "WorkspaceRootPath": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\gustavo.oliveira\\source\\repos\\projeto de vendas\\br.com.projeto.views\\providerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.views\\providerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\raquel\\source\\repos\\projeto vendas\\windows-form\\br.com.projeto.views\\historyform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.views\\historyform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\gustavo.oliveira\\source\\repos\\projeto de vendas\\br.com.projeto.dao\\employeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.dao\\employeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.views\\orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.views\\orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\gustavo.oliveira\\source\\repos\\projeto de vendas\\br.com.projeto.views\\clientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.views\\clientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\raquel\\source\\repos\\projeto vendas\\windows-form\\br.com.projeto.services\\orderitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.services\\orderitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\gustavo.oliveira\\source\\repos\\projeto de vendas\\br.com.projeto.views\\providerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.views\\providerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\raquel\\source\\repos\\projeto vendas\\windows-form\\br.com.projeto.views\\orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.views\\orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\gustavo.oliveira\\source\\repos\\projeto de vendas\\br.com.projeto.dao\\providerdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.dao\\providerdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\raquel\\source\\repos\\projeto vendas\\windows-form\\br.com.projeto.views\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.views\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\gustavo.oliveira\\source\\repos\\projeto de vendas\\br.com.projeto.models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\raquel\\source\\repos\\projeto vendas\\windows-form\\br.com.projeto.views\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.views\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\gustavo.oliveira\\source\\repos\\projeto de vendas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\raquel\\source\\repos\\projeto vendas\\windows-form\\br.com.projeto.dao\\orderdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.dao\\orderdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\gustavo.oliveira\\source\\repos\\projeto de vendas\\br.com.projeto.dao\\clientdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.dao\\clientdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\gustavo.oliveira\\source\\repos\\projeto de vendas\\br.com.projeto.models\\provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.models\\provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|c:\\users\\raquel\\source\\repos\\projeto vendas\\windows-form\\br.com.projeto.views\\paymentform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9B56678-C8AD-4858-BA7D-439BE7BCF0AC}|Projeto de Vendas.csproj|solutionrelative:br.com.projeto.views\\paymentform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,136 +42,107 @@
       "DocumentGroups": [
         {
           "DockedWidth": 277,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClientForm.cs",
-              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\ClientForm.cs",
-              "RelativeDocumentMoniker": "br.com.projeto.views\\ClientForm.cs",
-              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\ClientForm.cs",
-              "RelativeToolTip": "br.com.projeto.views\\ClientForm.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAswGoAAAAkAAAA",
+              "DocumentIndex": 0,
+              "Title": "HistoryForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.views\\HistoryForm.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.views\\HistoryForm.cs",
+              "ToolTip": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.views\\HistoryForm.cs [Design]",
+              "RelativeToolTip": "br.com.projeto.views\\HistoryForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T18:00:47.188Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-11-18T04:48:03.63Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderItemService.cs",
+              "DocumentMoniker": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.services\\OrderItemService.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.services\\OrderItemService.cs",
+              "ToolTip": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.services\\OrderItemService.cs",
+              "RelativeToolTip": "br.com.projeto.services\\OrderItemService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T04:32:58.421Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProviderForm.cs",
-              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\ProviderForm.cs",
-              "RelativeDocumentMoniker": "br.com.projeto.views\\ProviderForm.cs",
-              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\ProviderForm.cs",
-              "RelativeToolTip": "br.com.projeto.views\\ProviderForm.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAhwE4AAAANAAAA",
+              "DocumentIndex": 4,
+              "Title": "PaymentForm.cs",
+              "DocumentMoniker": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.views\\PaymentForm.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.views\\PaymentForm.cs",
+              "ToolTip": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.views\\PaymentForm.cs",
+              "RelativeToolTip": "br.com.projeto.views\\PaymentForm.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAAD8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T19:04:43.512Z",
+              "WhenOpened": "2024-11-18T03:20:01.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EmployeeDao.cs",
-              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.dao\\EmployeeDao.cs",
-              "RelativeDocumentMoniker": "br.com.projeto.dao\\EmployeeDao.cs",
-              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.dao\\EmployeeDao.cs",
-              "RelativeToolTip": "br.com.projeto.dao\\EmployeeDao.cs",
-              "ViewState": "AQIAAIgAAAAAAAAAAAAAwCUBAAA0AAAA",
+              "Title": "OrderForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.views\\OrderForm.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.views\\OrderForm.cs",
+              "ToolTip": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.views\\OrderForm.cs [Design]",
+              "RelativeToolTip": "br.com.projeto.views\\OrderForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T18:46:14.791Z",
+              "WhenOpened": "2024-11-17T16:45:11.621Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderDao.cs",
+              "DocumentMoniker": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.dao\\OrderDao.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.dao\\OrderDao.cs",
+              "ToolTip": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.dao\\OrderDao.cs",
+              "RelativeToolTip": "br.com.projeto.dao\\OrderDao.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAF8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T02:28:41.1Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProviderForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\ProviderForm.cs",
-              "RelativeDocumentMoniker": "br.com.projeto.views\\ProviderForm.cs",
-              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.views\\ProviderForm.cs [Design]",
-              "RelativeToolTip": "br.com.projeto.views\\ProviderForm.cs [Design]",
+              "Title": "OrderForm.cs",
+              "DocumentMoniker": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.views\\OrderForm.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.views\\OrderForm.cs",
+              "ToolTip": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.views\\OrderForm.cs",
+              "RelativeToolTip": "br.com.projeto.views\\OrderForm.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAmwLEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T16:29:54.377Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProviderDao.cs",
-              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.dao\\ProviderDao.cs",
-              "RelativeDocumentMoniker": "br.com.projeto.dao\\ProviderDao.cs",
-              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.dao\\ProviderDao.cs",
-              "RelativeToolTip": "br.com.projeto.dao\\ProviderDao.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAAAIUAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T16:56:18.15Z",
+              "WhenOpened": "2024-11-18T01:18:55.06Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\Client.cs",
-              "RelativeDocumentMoniker": "br.com.projeto.models\\Client.cs",
-              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\Client.cs",
-              "RelativeToolTip": "br.com.projeto.models\\Client.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "PaymentForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.views\\PaymentForm.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.views\\PaymentForm.cs",
+              "ToolTip": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.views\\PaymentForm.cs [Design]",
+              "RelativeToolTip": "br.com.projeto.views\\PaymentForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T16:50:51.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T18:21:28.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T01:49:26.598Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ClientDao.cs",
-              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.dao\\ClientDao.cs",
-              "RelativeDocumentMoniker": "br.com.projeto.dao\\ClientDao.cs",
-              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.dao\\ClientDao.cs",
-              "RelativeToolTip": "br.com.projeto.dao\\ClientDao.cs",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAswIAAAAAJAAAA",
+              "Title": "PaymentForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.views\\PaymentForm.Designer.cs",
+              "RelativeDocumentMoniker": "br.com.projeto.views\\PaymentForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Raquel\\source\\repos\\Projeto Vendas\\windows-form\\br.com.projeto.views\\PaymentForm.Designer.cs",
+              "RelativeToolTip": "br.com.projeto.views\\PaymentForm.Designer.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAAAKYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T17:48:40.413Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Provider.cs",
-              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\Provider.cs",
-              "RelativeDocumentMoniker": "br.com.projeto.models\\Provider.cs",
-              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\Provider.cs",
-              "RelativeToolTip": "br.com.projeto.models\\Provider.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAuwCkAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T16:50:45.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Person.cs",
-              "DocumentMoniker": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\Person.cs",
-              "RelativeDocumentMoniker": "br.com.projeto.models\\Person.cs",
-              "ToolTip": "C:\\Users\\gustavo.oliveira\\source\\repos\\Projeto de Vendas\\br.com.projeto.models\\Person.cs",
-              "RelativeToolTip": "br.com.projeto.models\\Person.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAACcAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:53:50.825Z",
+              "WhenOpened": "2024-11-18T03:36:01.763Z",
               "EditorCaption": ""
             }
           ]

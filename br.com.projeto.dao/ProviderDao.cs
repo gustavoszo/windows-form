@@ -162,6 +162,39 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
             }
         }
 
+        public void Delete(Provider obj)
+        {
+            _connection.Open();
+            MySqlTransaction transaction = null;
+
+            try
+            {
+                transaction = _connection.BeginTransaction();
+
+                string deleteClientQuery = @"DELETE FROM fornecedores WHERE cnpj = @cnpj";
+
+                MySqlCommand command = new MySqlCommand(deleteClientQuery, _connection, transaction);
+                command.Parameters.AddWithValue("@cnpj", obj.Cnpj);
+                command.ExecuteNonQuery();
+
+                string deleteAddressQuery = @"DELETE FROM address WHERE id_endereco = @id_endereco";
+                command = new MySqlCommand(deleteAddressQuery, _connection, transaction);
+                command.Parameters.AddWithValue("@id_endereco", obj.Address.IdAddress);
+
+                transaction.Commit();
+
+            }
+            catch (Exception e)
+            {
+                transaction.Rollback();
+                throw new ExceptionDb("Ocorreu um errro ao tentar deletar o Fornecedor " + e.Message);
+            }
+            finally
+            {
+                _connection.Close();
+            }
+        }
+
         public Provider FindByCnpj(string cnpj)
         {
             Provider provider = null;
@@ -255,6 +288,51 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
                 _connection.Close();
             }
 
+        }
+
+        public List<Provider> FindAllByName(string name)
+        {
+            List<Provider> providers = new List<Provider>();
+            _connection.Open();
+            try
+            {
+                string query = "SELECT * FROM fornecedores F " +
+                      "INNER JOIN enderecos E USING(id_endereco) " +
+                      "WHERE F.nome LIKE @nome";
+
+                MySqlCommand command = new MySqlCommand(query, _connection);
+                command.Parameters.AddWithValue("@nome", "%" + name + "%");
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        providers.Add(new Provider
+                        {
+                            Name = reader.GetString("nome"),
+                            Cnpj = reader.GetString("cnpj"),
+                            Email = reader.GetString("email"),
+                            Phone = reader.GetString("celular"),
+                            Address = new Address
+                            {
+                                Place = reader.GetString("logradouro"),
+                                Number = reader.GetInt32("numero"),
+                                City = reader.GetString("cidade"),
+                                State = reader.GetString("estado")
+                            }
+                        });
+                    }
+                }
+                return providers;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionDb("Ocorreu um erro ao buscar os fornecedores: " + e.Message);
+            }
+            finally
+            {
+                _connection.Close();
+            }
         }
 
     }

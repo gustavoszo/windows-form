@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.TabControl tabControlClient;
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.titleLabel = new System.Windows.Forms.Label();
             this.clientTabPage = new System.Windows.Forms.TabPage();
             this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
             this.comboBoxState = new System.Windows.Forms.ComboBox();
@@ -52,40 +50,19 @@
             this.table = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             tabControlClient = new System.Windows.Forms.TabControl();
-            this.panel1.SuspendLayout();
             tabControlClient.SuspendLayout();
             this.clientTabPage.SuspendLayout();
             this.listLabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel1.Controls.Add(this.titleLabel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 100);
-            this.panel1.TabIndex = 1;
-            // 
-            // titleLabel
-            // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.BackColor = System.Drawing.Color.Transparent;
-            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.ForeColor = System.Drawing.SystemColors.Window;
-            this.titleLabel.Location = new System.Drawing.Point(39, 41);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(245, 25);
-            this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "Cadastro de Fornecedor";
-            this.titleLabel.Click += new System.EventHandler(this.titleLabel_Click);
             // 
             // tabControlClient
             // 
@@ -187,7 +164,6 @@
             this.txtAddressNumber.Name = "txtAddressNumber";
             this.txtAddressNumber.Size = new System.Drawing.Size(73, 26);
             this.txtAddressNumber.TabIndex = 11;
-            this.txtAddressNumber.TextChanged += new System.EventHandler(this.txtAddressNumber_TextChanged);
             this.txtAddressNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddressNumber_KeyPress);
             // 
             // numberLabel
@@ -310,6 +286,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(279, 26);
             this.txtSearch.TabIndex = 2;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // labelSearch
             // 
@@ -320,6 +297,28 @@
             this.labelSearch.Size = new System.Drawing.Size(55, 20);
             this.labelSearch.TabIndex = 1;
             this.labelSearch.Text = "Nome:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Controls.Add(this.titleLabel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 100);
+            this.panel1.TabIndex = 1;
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.ForeColor = System.Drawing.SystemColors.Window;
+            this.titleLabel.Location = new System.Drawing.Point(39, 41);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(245, 25);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = "Cadastro de Fornecedor";
             // 
             // btnCancel
             // 
@@ -345,6 +344,7 @@
             this.btnDelete.Text = "Deletar";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Visible = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClean
             // 
@@ -384,14 +384,14 @@
             this.Name = "ProviderForm";
             this.Text = "Gerenciamento de fornecedores";
             this.Load += new System.EventHandler(this.ProviderForm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             tabControlClient.ResumeLayout(false);
             this.clientTabPage.ResumeLayout(false);
             this.clientTabPage.PerformLayout();
             this.listLabel.ResumeLayout(false);
             this.listLabel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

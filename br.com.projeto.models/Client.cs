@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_de_Vendas.br.com.projeto.models
 {
-    internal class Client : Person
+    public class Client : Person
     {
       
     }

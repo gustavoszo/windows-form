@@ -2,6 +2,7 @@
 using Projeto_de_Vendas.br.com.projeto.dao;
 using Projeto_de_Vendas.br.com.projeto.exceptions;
 using Projeto_de_Vendas.br.com.projeto.models;
+using Projeto_de_Vendas.br.com.projeto.services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,20 +20,16 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
         private Provider _provider;
         private Address _address;
-        private ProviderDao _providerDao;
+        private ProviderService _providerService;
 
         public ProviderForm()
         {
             _provider = new Provider();
             _address = new Address();
             _provider.Address = _address;
-            _providerDao = new ProviderDao();
+            _providerService = new ProviderService();
+            _providerService.ProviderDao = new ProviderDao();
             InitializeComponent();
-        }
-
-        private void titleLabel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -59,22 +56,18 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             {
                 if (id == null)
                 {
-                    if (_providerDao.FindByCnpj(_provider.Cnpj) != null) throw new CnpjUniqueValidationException("CNPJ já cadastrado!");
-                    if (_providerDao.FindByEmail(_provider.Email) != null) throw new EmailUniqueValidationException("Email já cadastrado!");
-                    _providerDao.Create(_provider);
+                    _providerService.Create(_provider);
                     MessageBox.Show("Fornecedor cadastrado com sucesso!", "Cadastro de Fornecedor");
                 }
                 else
                 {
-                    Provider provider = _providerDao.FindByEmail(_provider.Email);
-                    if (provider != null && provider.Cnpj != id) throw new EmailUniqueValidationException("E-mail já cadastrado");
-                    _providerDao.Update(_provider);
+                    _providerService.Update(_provider);
                     MessageBox.Show("Fornecedor atualizado com sucesso!", "Atualização de Fornecedor");
                 }
 
                 btnClean_Click(sender, e);
                 UnloadProvider();
-                table.DataSource = _providerDao.FindAll();
+                table.DataSource = _providerService.FindAll();
             
             }
             catch(ApplicationException ex)
@@ -115,11 +108,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8) e.Handled = true;
         }
 
-        private void txtAddressNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void UnloadProvider()
         {
             btnSave.Text = "Salvar";
@@ -132,7 +120,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
         }
         private void LoadProvider(string cnpj)
         {
-            _provider = _providerDao.FindByCnpj(cnpj);
+            _provider = _providerService.FindByCnpj(cnpj);
 
             btnSave.Text = "Atualizar";
             btnDelete.Visible = true;
@@ -152,13 +140,9 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
         private void ProviderForm_Load(object sender, EventArgs e)
         {
-            table.DataSource = _providerDao.FindAll();
+            table.DataSource = _providerService.FindAll();
         }
 
-        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void table_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -170,7 +154,51 @@ namespace Projeto_de_Vendas.br.com.projeto.views
         private void btnCancel_Click(object sender, EventArgs e)
         {
             UnloadProvider();
-            btnCancel_Click(sender, e);
+            btnClean_Click(sender, e);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                var result = MessageBox.Show(
+                    "Deseja realmente apagar o fornecedor",
+                    "Confirmação",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                    );
+
+                if (result == DialogResult.Yes)
+                {
+                    _providerService.Delete(_provider);
+                    MessageBox.Show("Fornecedor deletado com sucesso!", "Exclusão de Fornecedor");
+                    btnClean_Click(sender, e);
+                    UnloadProvider();
+                    table.DataSource = _providerService.FindAll();
+                }
+
+            }
+            catch(ExceptionDb ex)
+            {
+                MessageBox.Show(ex.Message, "Exclusão  de fornecedor");
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text.Trim() == "")
+            {
+                table.DataSource = _providerService.FindAll();
+                return;
+            }
+
+            table.DataSource = _providerService.FindAllByName(txtSearch.Text);
+        }
+
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_de_Vendas.br.com.projeto.models
 {
-    internal class Person
+    public class Person
     {
         public string Name { get; set; }
         public string Cpf { get; set; }

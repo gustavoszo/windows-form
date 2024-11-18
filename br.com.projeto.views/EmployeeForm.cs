@@ -3,6 +3,7 @@ using Projeto_de_Vendas.br.com.curso.utils;
 using Projeto_de_Vendas.br.com.projeto.dao;
 using Projeto_de_Vendas.br.com.projeto.exceptions;
 using Projeto_de_Vendas.br.com.projeto.models;
+using Projeto_de_Vendas.br.com.projeto.services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,14 +22,15 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
         private Employee _employee;
         private Address _address;
-        private EmployeeDao _employeeDao;
+        private EmployeeService _employeeService;
 
         public EmployeeForm()
         {
             _employee = new Employee();
             _address= new Address();    
             _employee.Address = _address;
-            _employeeDao = new EmployeeDao();   
+            _employeeService = new EmployeeService();
+            _employeeService.EmployeeDao = new EmployeeDao();
             InitializeComponent();
         }
 
@@ -68,24 +70,18 @@ namespace Projeto_de_Vendas.br.com.projeto.views
                 if (id == null)
                 {
                     _employee.Password = txtPassword.Text;
-                    if (_employeeDao.FindByEmail(_employee.Email) != null) throw new EmailUniqueValidationException("E-mail já cadastrado!");
-                    if (_employeeDao.FindByCpf(_employee.Cpf) != null) throw new CpfUniqueValidationException("CPF já cadastrado!");
-                    string salt;
-                    _employee.Password = PasswordHashUtil.GeneratePasswordHash(_employee.Password, out salt);
-                    _employeeDao.Create(_employee);
+                    _employeeService.Create(_employee);
                     MessageBox.Show("Funcionário cadastrado com sucesso!", "Cadastro de Funcionário");
                 }
                 else
                 {
-                    Employee employee = _employeeDao.FindByEmail(_employee.Email);
-                    if (employee != null && employee.Cpf != _employee.Cpf) throw new EmailUniqueValidationException("E-mail já cadastrado");
-                    _employeeDao.Update(_employee);
+                    _employeeService.Update(_employee);
                     MessageBox.Show("Funcionário atualizado com sucesso!", "Atualizaçao de Funcionário");
                 }
 
                 btnClean_Click(sender, e);
                 UnloadEmployee();
-                table.DataSource = _employeeDao.FindAll();
+                table.DataSource = _employeeService.FindAll();
             }
             catch(ApplicationException ex)
             {
@@ -129,7 +125,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
-            table.DataSource = _employeeDao.FindAll();
+            table.DataSource = _employeeService.FindAll();
         }
 
         private void table_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -141,7 +137,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
         private void LoadEmployee(string cpf)
         {
-            _employee = _employeeDao.FindByCpf(cpf);
+            _employee = _employeeService.FindByCpf(cpf);
 
             btnSave.Text = "Atualizar";
             btnDelete.Visible = true;
@@ -193,11 +189,11 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
                 if (result == DialogResult.Yes)
                 {
-                    _employeeDao.Delete(_employee);
+                    _employeeService.Delete(_employee);
                     MessageBox.Show("Funcionário deletado com sucesso!", "Exclusão de Funcionário");
                     UnloadEmployee();
                     btnClean_Click(sender, e);
-                    table.DataSource = _employeeDao.FindAll();
+                    table.DataSource = _employeeService.FindAll();
                 }
 
             }
@@ -210,11 +206,11 @@ namespace Projeto_de_Vendas.br.com.projeto.views
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             if (txtSearch.Text.Trim() == "") return;
-            List<Employee> list = _employeeDao.FindAllByName(txtSearch.Text);
+            List<Employee> list = _employeeService.FindAllByName(txtSearch.Text);
 
             if (list.Count == 0)
             {
-                table.DataSource = _employeeDao.FindAll();
+                table.DataSource = _employeeService.FindAll();
                 return;
             }
 

@@ -101,18 +101,31 @@
     <Compile Include="br.com.curso.utils\PasswordHashUtil.cs" />
     <Compile Include="br.com.projeto.dao\ClientDao.cs" />
     <Compile Include="br.com.projeto.dao\EmployeeDao.cs" />
+    <Compile Include="br.com.projeto.dao\OrderDao.cs" />
+    <Compile Include="br.com.projeto.dao\OrderItemDao.cs" />
+    <Compile Include="br.com.projeto.dao\ProductDao.cs" />
     <Compile Include="br.com.projeto.dao\ProviderDao.cs" />
     <Compile Include="br.com.projeto.db\ConnectionDb.cs" />
     <Compile Include="br.com.projeto.exceptions\CnpjUniqueValidationException.cs" />
     <Compile Include="br.com.projeto.exceptions\CpfUniqueValidationException.cs" />
+    <Compile Include="br.com.projeto.exceptions\ValidationException.cs" />
     <Compile Include="br.com.projeto.exceptions\EmailUniqueValidationException.cs" />
     <Compile Include="br.com.projeto.exceptions\ExceptionDb.cs" />
     <Compile Include="br.com.projeto.models\Address.cs" />
     <Compile Include="br.com.projeto.models\Client.cs" />
     <Compile Include="br.com.projeto.models\Employee.cs" />
     <Compile Include="br.com.projeto.models\enum\AccessLevel.cs" />
+    <Compile Include="br.com.projeto.models\Order.cs" />
+    <Compile Include="br.com.projeto.models\OrderItem.cs" />
     <Compile Include="br.com.projeto.models\Person.cs" />
+    <Compile Include="br.com.projeto.models\Product.cs" />
     <Compile Include="br.com.projeto.models\Provider.cs" />
+    <Compile Include="br.com.projeto.services\OrderItemService.cs" />
+    <Compile Include="br.com.projeto.services\OrderService.cs" />
+    <Compile Include="br.com.projeto.services\ProductService.cs" />
+    <Compile Include="br.com.projeto.services\ProviderService.cs" />
+    <Compile Include="br.com.projeto.services\EmployeeService .cs" />
+    <Compile Include="br.com.projeto.services\ClientService.cs" />
     <Compile Include="br.com.projeto.views\ClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +137,30 @@
     </Compile>
     <Compile Include="br.com.projeto.views\EmployeeForm.Designer.cs">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.projeto.views\HistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.views\HistoryForm.Designer.cs">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.projeto.views\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.views\OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.projeto.views\PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.views\PaymentForm.Designer.cs">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.projeto.views\ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.views\ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.projeto.views\ProviderForm.cs">
       <SubType>Form</SubType>
@@ -144,6 +181,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.views\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.views\HistoryForm.resx">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.views\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.views\PaymentForm.resx">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.views\ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.views\ProviderForm.resx">
       <DependentUpon>ProviderForm.cs</DependentUpon>

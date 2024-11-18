@@ -104,7 +104,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.clientTabPage.TabIndex = 0;
             this.clientTabPage.Text = "Dados Pessoais";
             this.clientTabPage.UseVisualStyleBackColor = true;
-            this.clientTabPage.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // txtCpf
             // 
@@ -114,7 +113,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.txtCpf.Size = new System.Drawing.Size(151, 26);
             this.txtCpf.TabIndex = 16;
             this.txtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
-            this.txtCpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.cpfMaskedTextBox_MaskInputRejected);
             // 
             // comboBoxState
             // 
@@ -131,11 +129,11 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             "AM",
             "AC",
             "GO"});
-            this.comboBoxState.Location = new System.Drawing.Point(480, 199);
+            this.comboBoxState.Location = new System.Drawing.Point(480, 202);
             this.comboBoxState.Name = "comboBoxState";
             this.comboBoxState.Size = new System.Drawing.Size(85, 28);
             this.comboBoxState.TabIndex = 15;
-            this.comboBoxState.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxState.SelectedIndexChanged += new System.EventHandler(this.comboBoxState_SelectedIndexChanged);
             // 
             // stateLabel
             // 
@@ -149,7 +147,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(119, 201);
+            this.txtCity.Location = new System.Drawing.Point(95, 202);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(279, 26);
             this.txtCity.TabIndex = 13;
@@ -166,7 +164,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             // 
             // txtAddressNumber
             // 
-            this.txtAddressNumber.Location = new System.Drawing.Point(492, 149);
+            this.txtAddressNumber.Location = new System.Drawing.Point(492, 152);
             this.txtAddressNumber.Name = "txtAddressNumber";
             this.txtAddressNumber.Size = new System.Drawing.Size(73, 26);
             this.txtAddressNumber.TabIndex = 11;
@@ -183,11 +181,10 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.numberLabel.Size = new System.Drawing.Size(69, 20);
             this.numberLabel.TabIndex = 10;
             this.numberLabel.Text = "Número:";
-            this.numberLabel.Click += new System.EventHandler(this.numberLabel_Click);
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(119, 152);
+            this.txtAddress.Location = new System.Drawing.Point(119, 155);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(279, 26);
             this.txtAddress.TabIndex = 9;
@@ -205,7 +202,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(110, 113);
+            this.txtPhone.Location = new System.Drawing.Point(104, 116);
             this.txtPhone.Mask = "(99) 00000-0000";
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(151, 26);
@@ -221,7 +218,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.phoneLabel.Size = new System.Drawing.Size(62, 20);
             this.phoneLabel.TabIndex = 6;
             this.phoneLabel.Text = "Celular:";
-            this.phoneLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -232,11 +228,10 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.label2.Size = new System.Drawing.Size(44, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "CPF:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(110, 70);
+            this.txtEmail.Location = new System.Drawing.Point(99, 73);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(279, 26);
             this.txtEmail.TabIndex = 3;
@@ -253,11 +248,10 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(110, 19);
+            this.txtName.Location = new System.Drawing.Point(97, 25);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(279, 26);
             this.txtName.TabIndex = 1;
-            this.txtName.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
             // 
             // nameLabel
             // 
@@ -268,7 +262,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.nameLabel.Size = new System.Drawing.Size(55, 20);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "Nome:";
-            this.nameLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // listLabel
             // 
@@ -286,6 +279,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             // table
             // 
             this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.table.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table.Location = new System.Drawing.Point(19, 75);
             this.table.Name = "table";
@@ -321,7 +315,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 100);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // titleLabel
             // 
@@ -334,7 +327,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             this.titleLabel.Size = new System.Drawing.Size(202, 25);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Cadastro de Cliente";
-            this.titleLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnSave
             // 

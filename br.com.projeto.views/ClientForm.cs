@@ -1,6 +1,7 @@
 ﻿using Projeto_de_Vendas.br.com.projeto.dao;
 using Projeto_de_Vendas.br.com.projeto.exceptions;
 using Projeto_de_Vendas.br.com.projeto.models;
+using Projeto_de_Vendas.br.com.projeto.services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
         private Client _client;
         private Address _address;
-        private ClientDao _clientDao;
+        private ClientService _clientService;
 
         public ClientForm()
         {
@@ -29,12 +30,13 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             _client = new Client();
             _address = new Address();
             _client.Address = _address;
-            _clientDao = new ClientDao();
+            _clientService = new ClientService();
+            _clientService.ClientDao = new ClientDao();
         }
 
         private void ClientForm_Load(object sender, EventArgs e)
         {
-            table.DataSource = _clientDao.FindAll();
+            table.DataSource = _clientService.FindAll();
 
             // Personaliza as colunas, se necessário
             table.Columns["Name"].HeaderText = "Nome";
@@ -45,61 +47,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
             // Exemplo de ocultar a coluna "Address" se não for necessário
             table.Columns["Address"].Visible = false;
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numberLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void deleteButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cpfMaskedTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void nameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -127,22 +74,18 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
                 if (id == null)  
                 {
-                    if (_clientDao.FindByCpf(txtCpf.Text) != null) throw new CpfUniqueValidationException("CPF já cadastrado!");
-                    if (_clientDao.FindByEmail(_client.Email) != null) throw new EmailUniqueValidationException("E-mail já cadastrado!");
-                    _clientDao.Create(_client);
+                    _clientService.Create(_client);
                     MessageBox.Show("Cliente cadastrado com sucesso!", "Cadastro de Cliente");
                 } 
                 else
                 {
-                    Client client = _clientDao.FindByEmail(_client.Email);
-                    if (client != null && client.Cpf != id) throw new EmailUniqueValidationException("E-mail já cadastrado");
-                    _clientDao.Update(_client);
+                    _clientService.Update(_client);
                     MessageBox.Show("Cliente atualizado com sucesso!", "Atualização de Cliente");
                 }
 
                 btnClean_Click(sender, e);
                 unloadClient();
-                table.DataSource = _clientDao.FindAll();
+                table.DataSource = _clientService.FindAll();
 
             }
             catch(ApplicationException ex)
@@ -178,13 +121,13 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
                 if (result == DialogResult.Yes)
                 {
-                    _clientDao.Delete(_client);
+                    _clientService.Delete(_client);
                     MessageBox.Show("Cliente deletado com sucesso!", "Exclusão de Cliente");
                     btnClean_Click(sender, e);
                     unloadClient();
                 }
 
-                table.DataSource = _clientDao.FindAll();
+                table.DataSource = _clientService.FindAll();
             }
             catch (ExceptionDb ex)
             {
@@ -226,7 +169,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
         private void loadClient(string cpf)
         {
-            _client = _clientDao.FindByCpf(cpf);
+            _client = _clientService.FindByCpf(cpf);
 
             btnSave.Text = "Atualizar";
             btnDelete.Visible = true;
@@ -266,11 +209,11 @@ namespace Projeto_de_Vendas.br.com.projeto.views
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             if (txtSearch.Text.Trim() == "") return;
-            List<Client> clients = _clientDao.FindAllByName(txtSearch.Text);
+            List<Client> clients = _clientService.FindAllByName(txtSearch.Text);
 
             if (clients.Count == 0)
             {
-                table.DataSource = _clientDao.FindAll(); 
+                table.DataSource = _clientService.FindAll(); 
                 return;
             }
 
@@ -284,6 +227,11 @@ namespace Projeto_de_Vendas.br.com.projeto.views
         }
 
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBoxState_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

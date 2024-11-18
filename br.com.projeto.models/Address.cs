@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_de_Vendas.br.com.projeto.models
 {
-    internal class Address
+    public class Address
     {
         public int IdAddress { get; set; }
         public string Place { get; set; }

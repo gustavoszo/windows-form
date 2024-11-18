@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_de_Vendas.br.com.projeto.models
 {
-    internal class Provider
+    public class Provider
     {
         public string Name { get; set; }
         public string Cnpj { get; set; }

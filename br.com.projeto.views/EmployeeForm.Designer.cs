@@ -319,7 +319,7 @@
             this.listLabel.Location = new System.Drawing.Point(4, 29);
             this.listLabel.Name = "listLabel";
             this.listLabel.Padding = new System.Windows.Forms.Padding(3);
-            this.listLabel.Size = new System.Drawing.Size(831, 238);
+            this.listLabel.Size = new System.Drawing.Size(838, 238);
             this.listLabel.TabIndex = 1;
             this.listLabel.Text = "Consulta";
             this.listLabel.UseVisualStyleBackColor = true;
@@ -327,6 +327,7 @@
             // table
             // 
             this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.table.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table.Location = new System.Drawing.Point(28, 61);
             this.table.Name = "table";
