@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_de_Vendas.br.com.projeto.models
 {
-    internal class Employee : Person
+    public class Employee : Person
     {
 
         public string Password { get; set; }

@@ -267,6 +267,7 @@
             // 
             // table
             // 
+            this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.table.BackgroundColor = System.Drawing.SystemColors.Window;
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table.Location = new System.Drawing.Point(436, 126);
@@ -303,6 +304,7 @@
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(73, 26);
             this.txtTotal.TabIndex = 32;
+            this.txtTotal.Text = "0";
             // 
             // btnCancel
             // 

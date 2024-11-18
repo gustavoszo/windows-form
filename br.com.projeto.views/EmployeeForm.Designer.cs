@@ -124,7 +124,7 @@
             "Recrutamento"});
             this.comboBoxPosition.Location = new System.Drawing.Point(85, 112);
             this.comboBoxPosition.Name = "comboBoxPosition";
-            this.comboBoxPosition.Size = new System.Drawing.Size(85, 28);
+            this.comboBoxPosition.Size = new System.Drawing.Size(141, 28);
             this.comboBoxPosition.TabIndex = 20;
             // 
             // labelPosition
@@ -217,7 +217,6 @@
             this.txtAddressNumber.Name = "txtAddressNumber";
             this.txtAddressNumber.Size = new System.Drawing.Size(73, 26);
             this.txtAddressNumber.TabIndex = 11;
-            this.txtAddressNumber.TextChanged += new System.EventHandler(this.txtAddressNumber_TextChanged);
             this.txtAddressNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddressNumber_KeyPress);
             // 
             // numberLabel
@@ -299,7 +298,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(279, 26);
             this.txtName.TabIndex = 1;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // nameLabel
             // 
@@ -333,7 +331,6 @@
             this.table.Name = "table";
             this.table.Size = new System.Drawing.Size(775, 150);
             this.table.TabIndex = 4;
-            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
             this.table.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellDoubleClick);
             // 
             // txtSearch

@@ -126,6 +126,12 @@ namespace Projeto_de_Vendas.br.com.projeto.views
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
             table.DataSource = _employeeService.FindAll();
+            table.Columns["Password"].Visible = false;
+            table.Columns["Name"].HeaderText = "Nome";
+            table.Columns["AccessLevel"].HeaderText = "Nível de acesso";
+            table.Columns["Position"].HeaderText = "Cargo";
+            table.Columns["Phone"].HeaderText = "Celular";
+            table.Columns["FullAddress"].HeaderText = "Endereço";
         }
 
         private void table_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -218,24 +224,10 @@ namespace Projeto_de_Vendas.br.com.projeto.views
              
         }
 
-        private void txtAddressNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtAddressNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8) e.Handled = true; 
         }
 
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

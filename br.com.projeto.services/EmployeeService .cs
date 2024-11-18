@@ -20,8 +20,7 @@ namespace Projeto_de_Vendas.br.com.projeto.services
             if (EmployeeDao.FindByCpf(employee.Cpf) != null) throw new CpfUniqueValidationException("CPF já cadastrado!");
             if (EmployeeDao.FindByEmail(employee.Email) != null) throw new EmailUniqueValidationException("E-mail já cadastrado!");
 
-            string salt;
-            employee.Password = PasswordHashUtil.GeneratePasswordHash(employee.Password, out salt);
+            employee.Password = PasswordHashUtil.GeneratePasswordHash(employee.Password);
             EmployeeDao.Create(employee);
         }
 
@@ -52,5 +51,11 @@ namespace Projeto_de_Vendas.br.com.projeto.services
             return EmployeeDao.FindAllByName(name);
         }
 
+
+        public Employee FindByEmail(string email)
+        {
+            return EmployeeDao.FindByEmail(email);
+        }
+        
     }
 }

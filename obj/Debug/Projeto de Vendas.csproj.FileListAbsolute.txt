@@ -97,3 +97,10 @@ C:\Users\Raquel\source\repos\Projeto Vendas\windows-form\obj\Debug\Projeto de Ve
 C:\Users\Raquel\source\repos\Projeto Vendas\windows-form\obj\Debug\Projeto_de_Vendas.br.com.projeto.views.ProductForm.resources
 C:\Users\Raquel\source\repos\Projeto Vendas\windows-form\obj\Debug\Projeto_de_Vendas.br.com.projeto.views.OrderForm.resources
 C:\Users\Raquel\source\repos\Projeto Vendas\windows-form\obj\Debug\Projeto_de_Vendas.br.com.projeto.views.PaymentForm.resources
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto_de_Vendas.br.com.projeto.views.HistoryForm.resources
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto_de_Vendas.br.com.projeto.views.OrderForm.resources
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto_de_Vendas.br.com.projeto.views.PaymentForm.resources
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto_de_Vendas.br.com.projeto.views.ProductForm.resources
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto_de_Vendas.br.com.projeto.views.OrderDetailForm.resources
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto_de_Vendas.br.com.projeto.views.HomeForm.resources
+C:\Users\gustavo.oliveira\source\repos\Projeto de Vendas\obj\Debug\Projeto_de_Vendas.br.com.projeto.views.LoginForm.resources

@@ -30,8 +30,8 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
             {
                 transaction = _connection.BeginTransaction();
 
-                string query = @"INSERT INTO vendas(cpf_cliente, data_venda, total_venda, observacao)
-                                VALUES(@cpf_cliente, @data_venda, @total_venda, @observacao)";
+                string query = @"INSERT INTO vendas(cpf_cliente, data_venda, total_venda, observacoes)
+                                VALUES(@cpf_cliente, @data_venda, @total_venda, @observacoes)";
 
                 MySqlCommand command = new MySqlCommand(query, _connection, transaction);
                 command.Parameters.AddWithValue("@cpf_cliente", obj.Client.Cpf);
@@ -82,14 +82,95 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
                     {
                         order = new Order()
                         {
-                            IdOrder = reader.GetInt32("id_order"),
+                            IdOrder = reader.GetInt32("id_venda"),
                             Client = new Client()
                             {
                                 Cpf = reader.GetString("cpf_cliente")
                             },
-                            Date = DateTime.Parse(reader.GetString("data_venda")),
-                            Note = reader.GetString("observacao"),
-                            Total = reader.GetDouble("total")
+                            Date = reader.GetDateTime("data_venda"),
+                            Note = reader.GetString("observacoes"),
+                            Total = reader.GetDouble("total_venda")
+                        };
+                    }
+                }
+                return order;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionDb("Ocorreu um erro: " + e.Message);
+            }
+            finally
+            {
+                _connection.Close();
+            }
+        }
+
+        public List<Order> FindOrdersByDate(DateTime initialDate, DateTime finalDate)
+        {
+            List<Order> orders = new List<Order>();
+            _connection.Open();
+            try
+            {
+           
+                string query = @"SELECT * FROM vendas V, clientes C
+                               WHERE v.cpf_cliente = C.cpf";
+
+                MySqlCommand command = new MySqlCommand(query, _connection);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        orders.Add(new Order()
+                        {
+                            IdOrder = reader.GetInt32("id_venda"),
+                            Client = new Client()
+                            {
+                                Cpf = reader.GetString("cpf_cliente")
+                            },
+                            Date = reader.GetDateTime("data_venda"),
+                            Note = reader.GetString("observacoes"),
+                            Total = reader.GetDouble("total_venda")
+                        });
+                    }
+                }
+                return orders;
+            }
+            catch (Exception e)
+            {
+                throw new ExceptionDb("Ocorreu um erro: " + e.Message);
+            }
+            finally
+            {
+                _connection.Close();
+            }
+        }
+
+        public Order FindById(int id)
+        {
+            Order order = null;
+            _connection.Open();
+            try
+            {
+                string query = @"SELECT * FROM vendas WHERE id_venda = @id_venda";
+
+                MySqlCommand command = new MySqlCommand(query, _connection);
+                command.Parameters.AddWithValue("@id_venda", id);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        order = new Order()
+                        {
+                            IdOrder = reader.GetInt32("id_venda"),
+                            Client = new Client()
+                            {
+                                Cpf = reader.GetString("cpf_cliente")
+                            },
+                            Date = reader.GetDateTime("data_venda"),
+                            Note = reader.GetString("observacoes"),
+                            Total = reader.GetDouble("total_venda")
                         };
                     }
                 }

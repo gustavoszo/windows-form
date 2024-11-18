@@ -21,9 +21,12 @@ namespace Projeto_de_Vendas.br.com.projeto.views
         private Client _client;
         private OrderService _orderService;
         private OrderItemService _orderItemService;
+        private OrderForm _orderForm;
 
-        public PaymentForm(List<OrderItem> cart, Client client, double total)
+        public PaymentForm(List<OrderItem> cart, Client client, double total, OrderForm orderForm)
         {
+            _orderForm = orderForm;
+
             _orderService = new OrderService();
             _orderService.OrderDao = new OrderDao();
 
@@ -32,8 +35,9 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
             _cart = cart;
             _client = client;
-            txtTotal.Text = total.ToString();
             InitializeComponent();
+            txtTotal.Text = total.ToString();
+            _orderForm = orderForm;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -60,12 +64,12 @@ namespace Projeto_de_Vendas.br.com.projeto.views
                 });
 
                 MessageBox.Show("Venda confirmada!", "Pagamento");
-                this.Dispose();
-                new OrderForm();
+                _orderForm.Clean();
+                this.Close();
             }
             catch (ExceptionDb ex)
             {
-                MessageBox.Show(ex.Message, "Pagamento");
+                throw ex;
             }
         }
 

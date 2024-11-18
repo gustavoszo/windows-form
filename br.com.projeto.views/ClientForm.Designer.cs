@@ -280,7 +280,7 @@ namespace Projeto_de_Vendas.br.com.projeto.views
             // 
             this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.table.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.table.Location = new System.Drawing.Point(19, 75);
             this.table.Name = "table";
             this.table.Size = new System.Drawing.Size(732, 150);
@@ -410,7 +410,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.TabPage clientTabPage;
         private System.Windows.Forms.TabPage listLabel;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.TextBox txtEmail;
@@ -435,5 +434,6 @@ namespace Projeto_de_Vendas.br.com.projeto.views
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView table;
         private Button btnCancel;
+        public TabPage clientTabPage;
     }
 }

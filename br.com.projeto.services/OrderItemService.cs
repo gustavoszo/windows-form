@@ -13,10 +13,21 @@ namespace Projeto_de_Vendas.br.com.projeto.services
     {
 
         public OrderItemDao OrderItemDao { get; set; }
+        public ProductService ProductService { get; set; }
 
         public void Create(OrderItem orderItem)
         {
             OrderItemDao.Create(orderItem);
+        }
+
+        public List<OrderItem> FindAllById(int id)
+        {
+            List<OrderItem> itens = OrderItemDao.FindAllByOrderId(id);
+            itens.ForEach(i =>
+            {
+                i.Product = ProductService.FindById((int)i.Product.IdProduct);
+            });
+            return itens;
         }
 
     }

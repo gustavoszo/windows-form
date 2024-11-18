@@ -97,7 +97,8 @@ namespace Projeto_de_Vendas.br.com.projeto.dao
                     while (reader.Read())
                     {
                         list.Add(new Employee()
-                        { Name = reader.GetString("nome"),
+                        {   
+                            Name = reader.GetString("nome"),
                             Cpf = reader.GetString("cpf"),
                             Email = reader.GetString("email"),
                             Password = reader.GetString("senha"),

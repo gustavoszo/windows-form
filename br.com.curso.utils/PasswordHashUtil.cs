@@ -7,44 +7,43 @@ using System.Threading.Tasks;
 
 namespace Projeto_de_Vendas.br.com.curso.utils
 {
-    internal class PasswordHashUtil
+    using System;
+    using System.Security.Cryptography;
+
+    public static class PasswordHashUtil
     {
 
-        // Função que gera um hash seguro utilizando PBKDF2
-        public static string GeneratePasswordHash(string password, out string sal)
+        // Método para gerar o hash da senha sem salt
+        public static string GeneratePasswordHash(string password)
         {
-            // Gerar um "sal" (salt) aleatório
-            using (var rng = new RNGCryptoServiceProvider())
-            {
-                byte[] saltBytes = new byte[16];
-                rng.GetBytes(saltBytes);
-                sal = Convert.ToBase64String(saltBytes);
+            // Salt fixo de 8 bytes
+            byte[] salt = new byte[8];  // Salt fixo de 8 bytes
+            for (int i = 0; i < salt.Length; i++) salt[i] = (byte)(i + 1);  // Preenche o salt com valores fixos (exemplo: 1, 2, 3... até 8)
 
-                // Aplicar PBKDF2 com o "sal" e a senha
-                using (var pbkdf2 = new Rfc2898DeriveBytes(password, saltBytes, 10000))
-                {
-                    byte[] hash = pbkdf2.GetBytes(20);  // Produz um hash de 20 bytes
-                    return Convert.ToBase64String(hash);  // Retorna o hash em base64
-                }
+            // Usando PBKDF2 para gerar o hash da senha com o salt fixo
+            using (var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000)) // Salt fixo de 8 bytes
+            {
+                byte[] hash = pbkdf2.GetBytes(20);  // Produz um hash de 20 bytes
+                return Convert.ToBase64String(hash);  // Retorna o hash em base64
             }
         }
 
-        public static bool VerifyPassword(string passsword, string storedHash, string sal)
+        // Método para verificar a senha fornecida
+        public static bool VerifyPassword(string password, string storedHash)
         {
-            // Convertendo o sal de volta para um array de bytes
-            byte[] saltBytes = Convert.FromBase64String(sal);
+            // Salt fixo usado para gerar o hash da senha (deve ser o mesmo salt usado na geração do hash)
+            byte[] salt = new byte[8];  // Salt fixo de 8 bytes
+            for (int i = 0; i < salt.Length; i++) salt[i] = (byte)(i + 1);  // Preenche o salt com os mesmos valores
 
-            // Usar PBKDF2 para gerar o hash da senha fornecida
-            using (var pbkdf2 = new Rfc2898DeriveBytes(passsword, saltBytes, 10000))
+            // Gerar o hash da senha fornecida com o mesmo salt fixo
+            using (var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000))
             {
                 byte[] hash = pbkdf2.GetBytes(20);
-                string verifiedHash = Convert.ToBase64String(hash);
+                string hashedPassword = Convert.ToBase64String(hash);
 
-                // Comparando o hash gerado com o armazenado
-                return storedHash == verifiedHash;
+                // Comparando o hash gerado com o hash armazenado
+                return storedHash == hashedPassword;
             }
         }
-
-
     }
 }

@@ -31,12 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.titleLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateInitialLabel = new System.Windows.Forms.Label();
-            this.dateFinalLabel = new System.Windows.Forms.Label();
-            this.dateTimeInitial = new System.Windows.Forms.DateTimePicker();
-            this.dateTimeFinal = new System.Windows.Forms.DateTimePicker();
-            this.table = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.dateTimeFinal = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeInitial = new System.Windows.Forms.DateTimePicker();
+            this.dateFinalLabel = new System.Windows.Forms.Label();
+            this.dateInitialLabel = new System.Windows.Forms.Label();
+            this.table = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
@@ -78,15 +78,33 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // dateInitialLabel
+            // btnSearch
             // 
-            this.dateInitialLabel.AutoSize = true;
-            this.dateInitialLabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.dateInitialLabel.Location = new System.Drawing.Point(6, 45);
-            this.dateInitialLabel.Name = "dateInitialLabel";
-            this.dateInitialLabel.Size = new System.Drawing.Size(117, 20);
-            this.dateInitialLabel.TabIndex = 22;
-            this.dateInitialLabel.Text = "Data de início:";
+            this.btnSearch.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSearch.Location = new System.Drawing.Point(596, 38);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(111, 35);
+            this.btnSearch.TabIndex = 26;
+            this.btnSearch.Text = "Procurar";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // dateTimeFinal
+            // 
+            this.dateTimeFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeFinal.Location = new System.Drawing.Point(400, 45);
+            this.dateTimeFinal.Name = "dateTimeFinal";
+            this.dateTimeFinal.Size = new System.Drawing.Size(152, 26);
+            this.dateTimeFinal.TabIndex = 25;
+            // 
+            // dateTimeInitial
+            // 
+            this.dateTimeInitial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeInitial.Location = new System.Drawing.Point(129, 44);
+            this.dateTimeInitial.Name = "dateTimeInitial";
+            this.dateTimeInitial.Size = new System.Drawing.Size(146, 26);
+            this.dateTimeInitial.TabIndex = 24;
             // 
             // dateFinalLabel
             // 
@@ -98,41 +116,26 @@
             this.dateFinalLabel.TabIndex = 23;
             this.dateFinalLabel.Text = "Data final:";
             // 
-            // dateTimeInitial
+            // dateInitialLabel
             // 
-            this.dateTimeInitial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeInitial.Location = new System.Drawing.Point(129, 44);
-            this.dateTimeInitial.Name = "dateTimeInitial";
-            this.dateTimeInitial.Size = new System.Drawing.Size(146, 26);
-            this.dateTimeInitial.TabIndex = 24;
-            // 
-            // dateTimeFinal
-            // 
-            this.dateTimeFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeFinal.Location = new System.Drawing.Point(400, 45);
-            this.dateTimeFinal.Name = "dateTimeFinal";
-            this.dateTimeFinal.Size = new System.Drawing.Size(152, 26);
-            this.dateTimeFinal.TabIndex = 25;
+            this.dateInitialLabel.AutoSize = true;
+            this.dateInitialLabel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.dateInitialLabel.Location = new System.Drawing.Point(6, 45);
+            this.dateInitialLabel.Name = "dateInitialLabel";
+            this.dateInitialLabel.Size = new System.Drawing.Size(117, 20);
+            this.dateInitialLabel.TabIndex = 22;
+            this.dateInitialLabel.Text = "Data de início:";
             // 
             // table
             // 
+            this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.table.BackgroundColor = System.Drawing.SystemColors.Window;
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table.Location = new System.Drawing.Point(12, 212);
             this.table.Name = "table";
             this.table.Size = new System.Drawing.Size(776, 226);
             this.table.TabIndex = 6;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnSearch.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSearch.Location = new System.Drawing.Point(596, 38);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(111, 35);
-            this.btnSearch.TabIndex = 26;
-            this.btnSearch.Text = "Procurar";
-            this.btnSearch.UseVisualStyleBackColor = false;
+            this.table.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellDoubleClick);
             // 
             // HistoryForm
             // 

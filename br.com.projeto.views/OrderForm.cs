@@ -11,6 +11,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
+using System.Globalization;
+using ZstdSharp.Unsafe;
 
 namespace Projeto_de_Vendas.br.com.projeto.views
 {
@@ -100,27 +103,33 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
             double subTotal = int.Parse(txtQty.Text) * _product.Price;
 
-            _cart.ForEach(i => {
-                if (i.Product == _product)
-                {
-                    i.Amount += int.Parse(txtQty.Text);
-                    i.SubTotal += subTotal;
-                }
-                else
-                {
-                    _cart.Add(new OrderItem()
-                    {
-                        Product = _product,
-                        Amount = int.Parse(txtQty.Text),
-                        SubTotal = subTotal,
-                    });
-                }
-            });
+            OrderItem item = _cart.Where(i => i.Product.IdProduct == _product.IdProduct).FirstOrDefault();
 
-            table.DataSource = _cart;
+            if (item != null)
+            {
+                item.Amount += int.Parse(txtQty.Text);
+                item.SubTotal += subTotal;
+
+            }
+            else
+            {
+                _cart.Add(new OrderItem()
+                {
+                    Product = _product,
+                    Amount = int.Parse(txtQty.Text),
+                    SubTotal = subTotal,
+                });
+            }
+
+            txtTotal.Text = (double.Parse(txtTotal.Text) + subTotal).ToString();
+
+            table.DataSource = null;
+            table.DataSource = _cart;  
             table.Columns["Product"].HeaderText = "Produto";
             table.Columns["Amount"].HeaderText = "Quantidade";
-
+            table.Columns["IdOrderItem"].Visible = false;
+            table.Columns["Order"].Visible = false;
+            table.Refresh();
         }
 
         private bool ValidateCart()
@@ -156,27 +165,74 @@ namespace Projeto_de_Vendas.br.com.projeto.views
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            /*
-            Product product = (Product) table.CurrentRow.Cells[3].Value;
-
-            _cart.ForEach(i =>
+            Product product;
+            try
             {
-                if (i.Product == product)
-                {
-                    txtTotal.Text = (double.Parse(txtTotal.Text) - i.SubTotal).ToString();
-                    _cart.Remove(i);
-                }
-            });
+                product = (Product) table.CurrentRow.Cells[2].Value;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Selecione um item para remover!", "Carrinho de compras");
+                return;
+            }
 
+            if (product == null) 
+            {
+                MessageBox.Show("Selecione um item para remover!", "Carrinho de compras");
+                return;
+            }
+
+
+            for (int i = 0; i < _cart.Count; i++)
+            {
+                OrderItem item = _cart[i];
+                if (item.Product == product)
+                {
+                    double total = double.Parse(txtTotal.Text) - item.SubTotal;
+                    txtTotal.Text = total.ToString();
+
+                    _cart.RemoveAt(i);
+
+                    break;  
+                }
+            }
+
+            table.DataSource = null;
             table.DataSource = _cart;
-            */
+            table.Columns["Product"].HeaderText = "Produto";
+            table.Columns["Amount"].HeaderText = "Quantidade";
+            table.Columns["IdOrderItem"].Visible = false;
+            table.Columns["Order"].Visible = false;
+            table.Refresh();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             
-            // PaymentForm paymentForm = new PaymentForm();
+            PaymentForm paymentForm = new PaymentForm(_cart, _client, double.Parse(txtTotal.Text), this);
+            paymentForm.ShowDialog();
 
+        }
+
+        public void Clean()
+        {
+            _client = new Client();
+            _cart = new List<OrderItem>();
+            _product = new Product();
+            txtCpf.Clear();
+            txtName.Clear();
+            txtDescription.Clear();
+            txtPrice.Clear();
+            txtTotal.Clear();
+            txtId.Clear();
+            txtQty.Clear();
+
+            table.DataSource = _cart;
+            table.Columns["Product"].HeaderText = "Produto";
+            table.Columns["Amount"].HeaderText = "Quantidade";
+            table.Columns["IdOrderItem"].Visible = false;
+            table.Columns["Order"].Visible = false;
+            table.Refresh();
         }
     }
 }

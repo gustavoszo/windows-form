@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="br.com.curso.utils\PasswordHashUtil.cs" />
+    <Compile Include="br.com.curso.utils\Session.cs" />
     <Compile Include="br.com.projeto.dao\ClientDao.cs" />
     <Compile Include="br.com.projeto.dao\EmployeeDao.cs" />
     <Compile Include="br.com.projeto.dao\OrderDao.cs" />
@@ -144,6 +145,24 @@
     <Compile Include="br.com.projeto.views\HistoryForm.Designer.cs">
       <DependentUpon>HistoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.projeto.views\HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.views\HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.projeto.views\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.views\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.projeto.views\OrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.projeto.views\OrderDetailForm.Designer.cs">
+      <DependentUpon>OrderDetailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.projeto.views\OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +203,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.views\HistoryForm.resx">
       <DependentUpon>HistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.views\HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.views\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.projeto.views\OrderDetailForm.resx">
+      <DependentUpon>OrderDetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.projeto.views\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
